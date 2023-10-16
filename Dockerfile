@@ -17,7 +17,7 @@ RUN rm -rf /var/lib/apt/lists/*
 # get the code into the right place and prepare to build it
 ADD . .
 RUN ls -la
-RUN git submodule sync && git submodule update --init --recursive
+# RUN git submodule sync && git submodule update --init --recursive
 RUN rm -rf build && mkdir build
 
 # upgrade Conan again, to avoid using an outdated version:
